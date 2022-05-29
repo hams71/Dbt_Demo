@@ -31,6 +31,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+
+
+# seeds:
+#   schema: Staging_Finance   # target_schema(From project)_schema(Provided here)
+
+
 models:
   dbt_model:
     # Config indicated by + and applies to all files under models/example/

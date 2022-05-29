@@ -1,0 +1,10 @@
+# version: 2
+
+# sources:
+#   - name: Stage_Schema
+#     description: 'Making source and getting data'
+#     database: Staging
+#     schema: Stage_Schema
+#     tables:
+#     - name: STG_Accounts
+#       description: 'We will use the store table'

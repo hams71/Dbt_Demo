@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: STG_Accounts
+    config:
+      column_types:
+        Account_ID: varchar(100) 
+        accountCategoryCode: varchar(100)
+        customerTypeCode: varchar(100)
+        industryCode: varchar(100)
+        primaryContactId: varchar(100)
+        accountNumber: varchar(100)
+        name: varchar(100)
+        revenue: varchar(100)
+        stateCode: varchar(100)
+        account_start_dt: varchar(100)
+        Account_end_dt: varchar(100)
+        

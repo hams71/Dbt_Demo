@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: snowflake_sample_data
+    description: 'Making source and getting data'
+    database: snowflake_sample_data
+    schema: TPCDS_SF10TCL
+    tables:
+    - name: store_sales
+      description: 'We will use the store table'
