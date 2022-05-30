@@ -33,12 +33,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 
-# seeds:
-#   schema: Staging_Finance   # target_schema(From project)_schema(Provided here)
-
 
 models:
   dbt_model:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+    STG:
+      +materialized: table
+  
