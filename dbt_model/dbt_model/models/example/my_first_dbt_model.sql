@@ -13,9 +13,10 @@ with source_data as (
 
     select 1 as id, 'Raza' as name
     union all
-    -- select 2 as id, 'Hams' as name
-    -- union all
-    select 3 as id, 'Muneeb' as name
+    select 2 as id, 'Ali' as name
+    union all
+    select 5 as id, 'Hamza' as name
+  
 
 )
 
