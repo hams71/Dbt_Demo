@@ -126,7 +126,7 @@ dbt_model:
 ### Program Flow
 
 <p align="center">
-  <img src="Images/Flow_2.jpg" width="850" >
+  <img src="Images/Flow.jpg" width="850" >
 </p>
 
 
