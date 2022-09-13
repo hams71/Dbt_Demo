@@ -167,8 +167,9 @@ dbt_model:
 
 - [dbt documentation](https://docs.getdbt.com/docs/introduction)
 - [dbt profile setup](https://docs.getdbt.com/reference/dbt_project.yml)
-- [Snowflake Youtube Playlist](https://www.youtube.com/playlist?list=PLy4OcwImJzBIX77cmNYiXIJ3tBhpNSUKI)
 - [dbt Youtube Playlist](https://www.youtube.com/playlist?list=PLy4OcwImJzBLJzLYxpxaPUmCWp8j1esvT)
+- [Snowflake Youtube Playlist](https://www.youtube.com/playlist?list=PLy4OcwImJzBIX77cmNYiXIJ3tBhpNSUKI)
+- Thanks to Kahan Data Solutions for the demo videos.
   
 ---
 ### Tools and Technologies
