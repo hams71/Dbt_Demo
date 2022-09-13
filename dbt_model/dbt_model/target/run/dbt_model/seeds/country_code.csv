@@ -1,0 +1,10 @@
+
+    
+    create table STAGING.STAGE_SCHEMA.country_code (country_id integer,country_name text,continent text)
+  ;
+    -- dbt seed --
+    
+            insert into STAGING.STAGE_SCHEMA.country_code (country_id, country_name, continent) values
+            (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
+        
+  
