@@ -7,10 +7,10 @@
 - [Data Build Tool](#data-build-tool)
 - [Folder Structure](#folder-structure)
 - [Program Flow](#program-flow)
-- [Architecture and Design](#architecture-and-design)
+- [Program Execution](#program-execution)
 - [Data Model](#data-model)
 - [Level Up](#level-up)
-- [Documentation & Material](#documentation-&-material)
+- [Documentation and Material](#documentation-and-material)
 - [Tools and Technologies](#tools-and-technologies)
 
 ---
@@ -134,8 +134,31 @@ dbt_model:
 
 ---
 
-### Architecture and Design
+### Program Execution
+  
+- To load file from seeds folder to Stage Tables in snowflake
+```bash
+  dbt seed
+```
+  
+- The data will be in the Stage Tables, now will load data to Core/Dim tables.
+  - City, Country, Transations will be loaded as they have no history handling needed.
+```bash
+  dbt run
+```
 
+- Rest of the tables have history handling and are SCD-2 in the snapshot folder.
+```bash
+  dbt snapshot
+```
+  
+- We can also check test cases that are defined on different models, snapshots, seeds 
+```bash
+  dbt test
+```
+  
+  
+  
 
 
 ---
@@ -163,7 +186,7 @@ dbt_model:
 
 ---  
 
-### Documentation & Material
+### Documentation and Material
 
 - [dbt documentation](https://docs.getdbt.com/docs/introduction)
 - [dbt profile setup](https://docs.getdbt.com/reference/dbt_project.yml)
