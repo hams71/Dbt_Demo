@@ -107,18 +107,18 @@ dbt_model:
 
 
 ### Folder Structure
-- dbt &emsp; - dbt cloned repo used for installation
-- dbt-evn &emsp;- python virtual env related
+- dbt &emsp;&emsp;&emsp; - dbt cloned repo used for installation
+- dbt-evn &emsp;&nbsp;- python virtual env related
 - dbt-model 
   - dbt-model &emsp; - after dbt init <name> this is created
     - analyses
-    - macros &emsp; - create macros here and refer later
-    - models &emsp; - tables, views, incremental load, merge 
-    - seeds &emsp; - flat files incase want to load to staging using dbt
-    - snapshots &emsp; - SCD tables
-    - tests &emsp;&emsp; - tests on different models
-    - dbt_project.yml &emsp; - one place to configure all
-    - packages.yml &emsp; - dbt has many packages which can be downloaded
+    - macros &emsp;&emsp;&emsp;&emsp;&emsp; - create macros here and refer later
+    - models &emsp;&emsp;&emsp;&emsp;&emsp; - tables, views, incremental load, merge 
+    - seeds &emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp; - flat files incase want to load to staging using dbt
+    - snapshots &emsp;&nbsp;&nbsp;&emsp;&emsp; - SCD tables
+    - tests &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - tests on different models
+    - dbt_project.yml &emsp;&nbsp; - one place to configure all
+    - packages.yml &emsp;&emsp; - dbt has many packages which can be downloaded
 
 
 ---
