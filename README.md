@@ -18,8 +18,8 @@
 
 ### Overview
 
-- The purpose of doing this was to learn how Tranformations can be made easy using dbt.
-- Check what different functionalities does dbt support that can save time.
+- The purpose of doing this was to learn how Tranformations step can be made easy using data build tool (dbt).
+- Check what different functionalities does dbt support that can save development time.
 - Snowflake was used as a warehouse. Free 30 day trail.
 
 
@@ -30,6 +30,8 @@
 - dbt enables analytics engineers to transform data in their warehouses by simply writing select statements.
 - dbt handles turning these select statements into tables and views.
 - dbt does the T in ELT (Extract, Load, Transform) processes.
+- dbt provides a web UI that can be used to visualize the lineage of how can is moving.
+- dbt web UI also provides detail about each model and what it depends on as well the as test cases on certain models.
 
 #### dbt Installation
 
@@ -43,6 +45,7 @@
 ```
 
 - Activate the env
+  - Keep in mind to be in the correct folder 
 ```bash
   source dbt-env/bin/activate
 ```
@@ -136,6 +139,11 @@ dbt_model:
 
 ### Program Execution
   
+- Before executing any of the commands remember to be in the correct folder.
+```bash
+  cd <project-name>
+```
+  
 - To load file from seeds folder to Stage Tables in snowflake
 ```bash
   dbt seed
@@ -147,7 +155,7 @@ dbt_model:
   dbt run
 ```
 
-- Rest of the tables have history handling and are SCD-2 in the snapshot folder.
+- The Snapshot folder has all those models on which SCD-2 is being used.
 ```bash
   dbt snapshot
 ```
@@ -156,7 +164,11 @@ dbt_model:
 ```bash
   dbt test
 ```
-  
+- dbt provides a web UI that can be accessed using.
+  - Internally it has all metadata in json that is saved and used by the web UI
+```bash
+  dbt docs serve
+```
   
   
 
