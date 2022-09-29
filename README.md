@@ -34,7 +34,7 @@
 - dbt web UI also provides detail about each model and what it depends on as well the as test cases on certain models.
 
 <p align="center">
-  <img src="Images/dbt_arch.png" width="850" >
+  <img src="Images/dbt-arch.png" width="850" >
 </p>
 
 #### dbt Installation
