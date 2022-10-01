@@ -114,16 +114,14 @@ dbt_model:
 
 
 ### Folder Structure
-- dbt &emsp;&emsp;&emsp; - dbt cloned repo used for installation                                                   <p align="center">
-                                                                                                          <img src="Images/dbt-folder.JPG" width="850" >
-                                                                                                                    </p> 
+- dbt &emsp;&emsp;&emsp; - dbt cloned repo used for installation    
 - dbt-evn &emsp;&nbsp;- python virtual env related
 - dbt-model 
   - dbt-model &emsp; - after dbt init <name> this is created
     - analyses
     - macros &emsp;&emsp;&emsp;&emsp;&emsp; - create macros here and refer later
     - models &emsp;&emsp;&emsp;&emsp;&emsp; - tables, views, incremental load, merge 
-    - seeds &emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp; - flat files incase want to load to staging using dbt
+    - seeds &emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp; - flat files incase want to load to staging tables using dbt
     - snapshots &emsp;&nbsp;&nbsp;&emsp;&emsp; - SCD tables
     - tests &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - tests on different models
     - dbt_project.yml &emsp;&nbsp; - one place to configure all
@@ -150,7 +148,7 @@ dbt_model:
   cd <project-name>
 ```
   
-- To load file from seeds folder to Stage Tables in snowflake
+- To load file from seeds folder to Stage Tables in snowflake.
 ```bash
   dbt seed
 ```
@@ -166,13 +164,14 @@ dbt_model:
   dbt snapshot
 ```
   
-- We can also check test cases that are defined on different models, snapshots, seeds 
+- We can also check test cases that are defined on different models, snapshots, seeds.
 ```bash
   dbt test
 ```
 - dbt provides a web UI that can be accessed using.
   - Internally it has all metadata in json that is saved and used by the web UI
 ```bash
+  dbt docs generate
   dbt docs serve
 ```
   
