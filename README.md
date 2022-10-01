@@ -182,7 +182,7 @@ dbt_model:
 - You can check different things in the UI and also the lineage as well.
   
 <p align="center">
-  <img src="Images/dbt-lineage.JPG">
+  <img src="Images/dbt-lineage.JPG", width="800">
 </p>
 
 
