@@ -158,6 +158,10 @@ dbt_model:
 ```bash
   dbt run
 ```
+- To run a specific folder inside model folder.
+```bash
+  dbt run -m <folder-name>
+```
 
 - The Snapshot folder has all those models on which SCD-2 is being used.
 ```bash
@@ -175,7 +179,11 @@ dbt_model:
   dbt docs serve
 ```
   
+- You can check different things in the UI and also the lineage as well.
   
+<p align="center">
+  <img src="Images/dbt-lineage.JPG">
+</p>
 
 
 ---
