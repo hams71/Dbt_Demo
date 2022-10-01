@@ -18,19 +18,19 @@
 
 ### Overview
 
-- The purpose of doing this was to learn how Tranformations step can be made easy using data build tool (dbt).
+- The purpose of doing this was to learn how the **Tranformations** step can be made easy using data build tool (dbt).
 - Check what different functionalities does dbt support that can save development time.
-- Snowflake was used as a warehouse. Free 30 day trail.
+- Snowflake was used as a warehouse. Free 30 day trail when you sign up.
 
 
 ---
 
 ### Data Build Tool
 
-- dbt enables analytics engineers to transform data in their warehouses by simply writing select statements.
-- dbt handles turning these select statements into tables and views.
+- dbt enables analytics engineers to transform data in their warehouses by simply writing **select statements**.
+- dbt handles turning these select statements into **tables** and **views**. These tables can be incremental can dbt will handle that.
 - dbt does the T in ELT (Extract, Load, Transform) processes.
-- dbt provides a web UI that can be used to visualize the lineage of how can is moving.
+- dbt provides a web UI that can be used to visualize the lineage and dependency of models.
 - dbt web UI also provides detail about each model and what it depends on as well the as test cases on certain models.
 
 <p align="center">
@@ -39,7 +39,7 @@
 
 #### dbt Installation
 
-- Install git and python 
+- Install git and python. 
 - dbt installation on Linux has some problem and due to that we need install the dbt-core project.
 - Will be doing this all in a virtual environment.
 
@@ -49,27 +49,28 @@
 ```
 
 - Activate the env
-  - Keep in mind to be in the correct folder 
+  - Remember to be in the correct folder. 
 ```bash
   source dbt-env/bin/activate
 ```
-- In this repo dbt is also ready there you can use that or clone there repo.
+- In this repo dbt-core has already been download but you can clone it as well.
 ```bash
   git clone https://github.com/dbt-labs/dbt.git
 ```
 
-- Go into the dbt folder
+- Go into the dbt folder and install dbt.
+- In the requirements.txt you can specify what to download e.g. snowflake, big-query.
 ```bash
   cd dbt
   pip install -r requirements.txt
 ```
 
-- Check if dbt installed
+- Command to verify dbt installed.
 ```bash
   dbt --version
 ```
 
-- Download the Snowflake Plugin
+- Download the Snowflake Plugin if not specified in the requirements.txt file
 ```bash
   pip install dbt-snowflake
 ```
@@ -86,7 +87,7 @@
 - Two file will be present.
   - profile.yml
   - .user.yml
-- In the profile.yml we provide our Snowflake credentials. Refer to dbt documentation.
+- In the **profile.yml** we provide our Snowflake credentials. Refer to dbt documentation.
 - https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile
 ```bash
 dbt_model:
@@ -104,17 +105,18 @@ dbt_model:
   target: dev
 ```
 
-- When snowflake profile has been set, execute this will tell, if connection made.
+- When snowflake profile has been set, run the command to check the connection.
 ```bash
   dbt debug
  ```
-
 
 ---
 
 
 ### Folder Structure
-- dbt &emsp;&emsp;&emsp; - dbt cloned repo used for installation
+- dbt &emsp;&emsp;&emsp; - dbt cloned repo used for installation                                                   <p align="center">
+                                                                                                          <img src="Images/dbt-folder.JPG" width="850" >
+                                                                                                                    </p> 
 - dbt-evn &emsp;&nbsp;- python virtual env related
 - dbt-model 
   - dbt-model &emsp; - after dbt init <name> this is created
