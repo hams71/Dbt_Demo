@@ -16,7 +16,7 @@
 
 with final as (
     SELECT 
-        {{ dbt_utils.surrogate_key(['Address_Id'])}},
+        {{ dbt_utils.surrogate_key(['Address_Id'])}} as Sur_Id,
         Address_Id,
         City_ID,
         street
