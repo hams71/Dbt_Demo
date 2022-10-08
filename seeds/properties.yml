@@ -1,0 +1,88 @@
+version: 2
+
+seeds:
+  - name: STG_Accounts
+    columns:
+      - name: Account_Id
+        tests:
+          - unique
+    config:
+      column_types:
+        Account_ID: varchar(100) 
+        accountCategoryCode: varchar(100)
+        customerTypeCode: varchar(100)
+        industryCode: varchar(100)
+        primaryContactId: varchar(100)
+        accountNumber: varchar(100)
+        name: varchar(100)
+        revenue: varchar(100)
+        stateCode: varchar(100)
+        account_start_dt: varchar(100)
+        Account_end_dt: varchar(100)
+
+
+       
+  
+  - name: STG_Address
+    config:
+      column_types:
+        Address_Id: varchar(100) 
+        City_Id: varchar(100)
+        Street: varchar(100)
+
+  - name: STG_Bank
+    config:
+      column_types:
+        BankCode: varchar(100) 
+        bank_id: varchar(100)
+        BankName: varchar(100)
+        Country: varchar(100)
+        primaryContactId: varchar(100)
+        Telephone: varchar(100)
+        Address_ID: varchar(100)
+
+  - name: STG_Branch
+    config:
+      column_types:
+        Bank_ID: varchar(100) 
+        Branch_Code: varchar(100)
+        BankName: varchar(100)
+        BranchName: varchar(100)
+        Address_ID: varchar(100)
+        Telephone: varchar(100)
+
+  - name: STG_City
+    config:
+      column_types:
+        Country_ID: varchar(100) 
+        City_ID: varchar(100)
+        Name: varchar(100)
+
+
+  - name: STG_Contact
+    config:
+      column_types:
+        ContactId: varchar(100) 
+        customerTypeCode: varchar(100)
+        preferredContactMethod: varchar(100)
+        BranchName: varchar(100)
+        accountId: varchar(100)
+        jobTitle: varchar(100)
+        FullName: varchar(100)
+        department: varchar(100)
+        birthDate: varchar(100)
+        annualIncome: varchar(100)
+        MaritalStatus: varchar(100)
+        numberOfChildren: varchar(100)
+        TelePhone: varchar(100)
+        Address_id: varchar(100)
+
+  - name: STG_Transactions
+    config:
+      column_types:
+        TransactionID: varchar(100) 
+        Account_ID: varchar(100)
+        Transaction_Type: varchar(100)
+        Amount: varchar(100)
+        DateTime: varchar(100)
+        
