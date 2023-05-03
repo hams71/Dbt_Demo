@@ -28,7 +28,7 @@
 ### Data Build Tool
 
 - dbt enables analytics engineers to transform data in their warehouses by simply writing **select statements**.
-- dbt handles turning these select statements into **tables** and **views**. These tables can be incremental can dbt will handle that.
+- dbt handles turning these select statements into **tables** and **views**. These tables can be incremental and dbt will handle that.
 - dbt does the T in ELT (Extract, Load, Transform) processes.
 - dbt provides a web UI that can be used to visualize the lineage and dependency of models.
 - dbt web UI also provides detail about each model and what it depends on as well the as test cases on certain models.
